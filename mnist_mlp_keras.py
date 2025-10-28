@@ -36,13 +36,13 @@ model.add(Dense(10,'softmax'))
 model.compile(optimizer='adam',loss='categorical_crossentropy',metrics=['accuracy'])
 
 #train
-history=model.fit(x_train,y_train,epochs=10,batch_size=64) #64 images
+result=model.fit(x_train,y_train,epochs=10,batch_size=64) #64 images
 
 # evaluate
 loss,accuracy=model.evaluate(x_test,y_test)
 print(f"test loss:{loss}")
 print(f"test accuracy:{accuracy}")
-print(history)
+print(result.history)
 
 print('##########')
 
