@@ -29,7 +29,7 @@ model_base.compile(optimizer=Adam(learning_rate=0.001),
 
 history_base = model_base.fit(x_train, y_train, epochs=10, batch_size=128, validation_split=0.2)
 loss, test_accuracy_base = model_base.evaluate(x_test, y_test)
-
+print(f"test accuracy:{test_accuracy_base}")
 # -------------------------
 # Model 2: L2 = 1e-4
 # -------------------------
@@ -47,7 +47,7 @@ model_le4.compile(optimizer=Adam(learning_rate=0.001),
 
 history_le4 = model_le4.fit(x_train, y_train, epochs=10, batch_size=128, validation_split=0.2)
 loss, test_accuracy_le4 = model_le4.evaluate(x_test, y_test)
-
+print(f"test accuracy:{test_accuracy_le4}")
 # -------------------------
 # Model 3: L2 = 1e-2
 # -------------------------
@@ -65,7 +65,7 @@ model_le2.compile(optimizer=Adam(learning_rate=0.001),
 
 history_le2 = model_le2.fit(x_train, y_train, epochs=10, batch_size=128, validation_split=0.2)
 loss, test_accuracy_le2 = model_le2.evaluate(x_test, y_test)
-
+print(f"test accuracy:{test_accuracy_le2}")
 # -------------------------
 # Visualization
 # -------------------------
